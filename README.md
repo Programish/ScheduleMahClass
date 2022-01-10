@@ -1,2 +1,2 @@
 # ScheduleMyClass
-Automated System joining online class with zoom and meet
+Automated System for joining online meetings on zoom and google meet.
