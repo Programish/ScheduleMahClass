@@ -2,6 +2,7 @@ import pandas as pd
 import webbrowser
 from datetime import datetime, timedelta
 from time import sleep
+import pyautogui
 
 df_link = pd.read_csv('Subject_Links.csv', index_col=0)
 #webbrowser.open_new_tab(df['Links']['Subject_Name'])
@@ -10,11 +11,14 @@ df_sub = pd.read_csv('Time_Table.csv', index_col='WeekDays')
 #print(df_sub.info())
 
 def handler(sub):
+    
     if sub not in ('Robotics'): 
         webbrowser.open_new_tab(df_link['Links'][sub])
+    #    if 'meet' in df_link['Links'][sub]:
+            
     else:
-
-        print('No class !!!!')
+        t = datetime.now().strftime('%H:%M:%S')
+        print('No class at ' + t)
 
 def wait_and_call(time, cb, sub):
         
