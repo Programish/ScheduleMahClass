@@ -12,7 +12,7 @@ df_sub = pd.read_csv('assets/Time_Table.csv', index_col='WeekDays')
 
 def handler(sub):
     
-    if sub not in ('CLC'): 
+    if sub not in ('CLC', 'X'): 
         webbrowser.open_new_tab(df_link['Links'][sub])
     #    if 'meet' in df_link['Links'][sub]:
             
