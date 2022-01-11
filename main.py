@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 from time import sleep
 import pyautogui
 
-df_link = pd.read_csv('Subject_Links.csv', index_col=0)
+df_link = pd.read_csv('assets/Subject_Links.csv', index_col=0)
 #webbrowser.open_new_tab(df['Links']['Subject_Name'])
 
-df_sub = pd.read_csv('Time_Table.csv', index_col='WeekDays')
+df_sub = pd.read_csv('assets/Time_Table.csv', index_col='WeekDays')
 #print(df_sub.info())
 
 def handler(sub):
