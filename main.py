@@ -2,7 +2,6 @@ import pandas as pd
 import webbrowser
 from datetime import datetime, timedelta
 from time import sleep
-import pyautogui
 
 df_link = pd.read_csv('assets/Subject_Links.csv', index_col=0)
 #webbrowser.open_new_tab(df['Links']['Subject_Name'])
