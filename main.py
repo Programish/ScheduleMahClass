@@ -13,7 +13,7 @@ def handler(sub):
     
     if sub not in ('CLC', 'X'): 
         webbrowser.open_new_tab(df_link['Links'][sub])
-	print(sub + 'class is started!!')
+        print(sub + 'class is started!!')
     #    if 'meet' in df_link['Links'][sub]:
             
     else:
