@@ -5,6 +5,7 @@ init(autoreset=True)
 
 #ScheduleMahClass    
 def Start():
+    print()
     print(Fore.RED + Style.BRIGHT + '   _____     ', end='') 
     print(Fore.GREEN + '      ______')
     print(Fore.YELLOW + Style.BRIGHT + '  / ___/____', end='')
@@ -18,6 +19,7 @@ def Start():
 
 #EndOfDay
 def End():
+    print()
     print(Fore.RED + Style.BRIGHT + '    ______   ', end='') 
     print(Fore.GREEN + '   ____ ')
     print(Fore.YELLOW + Style.BRIGHT + '   / ____/___', end='')
