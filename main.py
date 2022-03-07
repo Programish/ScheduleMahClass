@@ -6,7 +6,7 @@ from color import *
 
 df_link = pd.read_csv('assets/Subject_Links.csv', index_col=0)
 
-df_sub = pd.read_csv('assets/Time_Table.csv', header=0)#'WeekDays')
+df_sub = pd.read_csv('assets/Time_Table.csv', header=None)
 #print(df_sub.info())
 
 def handler(sub):
@@ -39,7 +39,7 @@ def wait_and_call(time, cb, sub):
 def main():
     Today_num = datetime.today().weekday()
     sub = df_sub.iloc[Today_num]
-    
+    print(Today_num)    
     # Initial starting time of today's meeting
     today_time = datetime.now().replace(hour=8, minute=0, second=0,
             microsecond=0)
