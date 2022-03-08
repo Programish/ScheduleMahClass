@@ -6,12 +6,17 @@ from color import *
 
 df_link = pd.read_csv('assets/Subject_Links.csv', index_col=0)
 
-df_sub = pd.read_csv('assets/Time_Table.csv', header=None)
+df_sub = pd.read_csv('assets/Time_Table.csv', index_col=False, header=None)
+new_columns = df_sub.columns.values
+new_columns[0] = 0
+df_sub.columns = new_columns
+df_sub = df_sub.set_index(0)
 #print(df_sub.info())
 
 def handler(sub):
     
-    if sub != 'X':
+#    if sub != 'X':
+    if 'X' not in sub:
 
         if sub not in ('CLC', 'SE'): 
             webbrowser.open_new_tab(df_link['Links'][sub])
