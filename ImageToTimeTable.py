@@ -1,6 +1,16 @@
-def main(url):
-    image_tables = table_ocr.extract_tables.main('/assets/image.png')
-    print("Running `{}`".format(f"extract_tables.main([{image_filepath}])."))
+import os
+import sys
+
+import requests
+import table_ocr.util
+import table_ocr.extract_tables
+import table_ocr.extract_cells
+import table_ocr.ocr_image
+import table_ocr.ocr_to_csv
+
+def main(path):
+    image_tables = table_ocr.extract_tables.main(path)
+    print("Running `{}`".format(f"extract_tables.main([{path}])."))
     print("Extracted the following tables from the image:")
     print(image_tables)
     for image, tables in image_tables:
@@ -28,4 +38,6 @@ def main(url):
 
 if __name__ == "__main__":
     csv_output = main(sys.argv[1])
+    file = open("new_file.csv", "w")
+    file.write(csv_output)
 
